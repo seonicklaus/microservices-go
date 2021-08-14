@@ -4,6 +4,7 @@
 //
 // Schemes: http
 // BasePath: /
+// Version: 1.0.0
 //
 // Consumes:
 // - application/json
@@ -44,6 +45,14 @@ type productsResponseWrapper struct {
 	Body []data.Product
 }
 
+// Data Structure representing a single product
+// swagger:response productResponse
+type productResponseWrapper struct {
+	// Newly created product
+	// in: body
+	Body data.Product
+}
+
 // No content is returned by this API endpoint
 // swagger:response noContentResponse
 type noContentResponseWrapper struct{}
@@ -57,9 +66,9 @@ type productParameterWrapper struct {
 	Body data.Product
 }
 
-// swagger:parameters deleteProduct
+// swagger:parameters listSingleProduct deleteProduct
 type productIDParameterWrapper struct {
-	// The ID of the product to delete from the database
+	// The ID of the product for which the operation relates
 	// in: path
 	// required: true
 	ID int `json:"id"`
