@@ -5,8 +5,12 @@ go 1.16
 require (
 	github.com/felixge/httpsnoop v1.0.2 // indirect
 	github.com/go-openapi/analysis v0.20.1 // indirect
+	github.com/go-openapi/errors v0.20.0 // indirect
 	github.com/go-openapi/jsonreference v0.19.6 // indirect
 	github.com/go-openapi/runtime v0.19.30 // indirect
+	github.com/go-openapi/strfmt v0.20.1 // indirect
+	github.com/go-openapi/swag v0.19.15 // indirect
+	github.com/go-openapi/validate v0.20.2 // indirect
 	github.com/go-playground/validator/v10 v10.9.0 // indirect
 	github.com/go-swagger/go-swagger v0.27.0 // indirect
 	github.com/gorilla/mux v1.8.0

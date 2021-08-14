@@ -15,6 +15,8 @@ import (
 func (p *Products) ListAll(w http.ResponseWriter, r *http.Request) {
 	p.l.Println("[DEBUG] get all records")
 
+	w.Header().Add("Content-Type", "application/json")
+
 	prods := data.GetProducts()
 
 	err := data.ToJSON(prods, w)
@@ -23,6 +25,12 @@ func (p *Products) ListAll(w http.ResponseWriter, r *http.Request) {
 		p.l.Println("[ERROR] serializing product, ", err)
 	}
 }
+
+// swagger:route GET /product/{id} products listSingleProduct
+// Return a list of products from the database
+// responses:
+//	200: productResponse
+// 	404: errorResponse
 
 // ListSingle handles GET request
 func (p *Products) ListSingle(w http.ResponseWriter, r *http.Request) {
